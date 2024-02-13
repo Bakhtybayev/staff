@@ -1,0 +1,149 @@
+:host {
+  font-size: 12px;
+
+  a {
+    text-decoration: none;
+  }
+  .title {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 200px;
+    }
+  }
+
+  .button {
+    margin-top: 27px;
+    display: flex;
+    justify-content: center;
+    button {
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+      background-color: #1a62b4;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 10px 0;
+      width: 70%;
+      border-radius: 10px;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      font-weight: 600;
+    }
+    .img-container {
+      background-color: white;
+      padding: 4px 4px 0px 10px;
+      margin-right: -15px;
+      margin-left: 13px;
+      img {
+        width: 8px;
+        color: red;
+      }
+    }
+  }
+
+  .three-friends {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 28px;
+    margin-bottom: 28px;
+
+    .line {
+      width: 26%;
+      border-top: 1px solid rgba(128, 128, 128, 0.603);
+    }
+
+    .or {
+      margin-right: 18px;
+      margin-left: 18px;
+      color: rgb(73, 73, 73);
+      font-weight: 600;
+    }
+  }
+
+  .col {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .field {
+      position: relative;
+      margin-bottom: 10px;
+
+      input {
+        font-size: 12px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .show-password {
+        position: absolute;
+        right: 10px;
+        top: 12.3px;
+        font-size: 13.4px;
+        font-weight: 600;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    }
+  }
+
+  .forgot-password {
+    margin-top: 18px;
+    display: flex;
+    justify-content: end;
+    margin-right: 65px;
+    color: #1f78dd;
+  }
+
+  .log-in-button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #3a8dec;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 10px 0;
+      width: 70%;
+      border-radius: 10px;
+    }
+  }
+
+  .sign-up {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    color: gray;
+  }
+
+  .footer-line {
+    border-top: 1px solid gray;
+    width: 100%;
+    position: fixed;
+    bottom: 70px;
+  }
+  .footer {
+    position: fixed;
+    background-color: rgb(143, 15, 15);
+    left: 42%;
+    right: 58%;
+    bottom: 10px;
+    .from {
+      margin-left: 20.5px;
+      color: rgb(92, 87, 87);
+    }
+
+    .meta-icon {
+      img {
+        width: 70px;
+      }
+    }
+  }
+}

