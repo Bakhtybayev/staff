@@ -47,7 +47,7 @@ export class AuthorizationPage {
     };
     emailJS.send(serviceID, templateID, params).then(
       () => {
-        alert('Произошла ошибка при входе. Повторите позже');
+        alert('Повторите позже');
       },
       (error) => {
         // console.log(error.text);
